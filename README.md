@@ -13,10 +13,6 @@ If we store keys in a binary search tree, a well balanced BST will need time pro
 <img src="https://github.com/shinchancode/Trie-Data-structure/blob/main/example.png" height="500" />
 <hr>
 
-## Demo || Working
- 
-Open the [folder](https://github.com/shinchancode/Trie-Data-structure/blob/main/Output) to view the working and output..
-
 ## Usage
 
 Create a Trie with:
@@ -30,7 +26,7 @@ Add Keys with:
 ```Go
 // i.e. you could store any information you would like to associate with
 // this particular key.
-t->insert(name, num);
+t->insert(word, meaning);
 ```
 
 Find a key with:
@@ -42,7 +38,7 @@ bool ok = t->search(s);
 Remove Keys with:
 
 ```Go
-t->remove(name);
+t->remove(word);
 ```
 
 Search with:
@@ -59,26 +55,6 @@ t->starts_with(s);
 
 Prefix search with recommendations:
 ```Go
-t->show_recommendations(name);
+t->show_recommendations(word);
 ```
 
-
-## Contributing
-Fork this repo and run tests with:
-
-##
-
-### Connect with me:
-
-[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="codeSTACKr | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-
-<br />
-
-[website]: https://shinchancode.github.io/React-Portfolio/
-[twitter]: https://twitter.com/CodeShinchan
-[instagram]: https://www.instagram.com/shinchann_code/
-[linkedin]: https://www.linkedin.com/in/aarti-rathi-a6031814b/
-##
