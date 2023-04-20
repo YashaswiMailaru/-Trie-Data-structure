@@ -34,7 +34,7 @@ public:
 
 	//Inserting a word into the trie
 
-	void insert(string word,string phn_no)
+	void insert(string word,string meaning)
 	{
 		Node* temp = root;
 
@@ -55,7 +55,7 @@ public:
 		}
 
 		temp->is_last.first = 1;
-		temp->is_last.second = phn_no;
+		temp->is_last.second = meaning;
 		cout<<"\t\t\t\t\t\t ***Data Added Successfully *** \n";
 	}
 
