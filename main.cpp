@@ -8,11 +8,11 @@ int menu()
     cout<<"\n";
     cout<<"\t\t\t\t\t--------------------------------------------\n";
     cout<<"\t\t\t\t\t--------------------------------------------\n";
-    cout<<"\t\t\t\t\t|          PHONE BOOK APPLICATION          |\n";
+    cout<<"\t\t\t\t\t|              spell checker               |\n";
     cout<<"\t\t\t\t\t--------------------------------------------\n";
     cout<<"\t\t\t\t\t|                                          |\n";
-    cout<<"\t\t\t\t\t|       [1]  Add Contacts                  |\n";
-    cout<<"\t\t\t\t\t|       [2]  Search by Name                |\n";
+    cout<<"\t\t\t\t\t|       [1]  Add word                      |\n";
+    cout<<"\t\t\t\t\t|       [2]  Search by word                |\n";
     cout<<"\t\t\t\t\t|       [3]  Search by Prefix              |\n";
     cout<<"\t\t\t\t\t|       [4]  Delete Data                   |\n";
     cout<<"\t\t\t\t\t|       [5]  Show Recommendations          |\n";
@@ -40,35 +40,32 @@ int main()
         if(ch==1)
         {
 
-            cout<<"\t\t\t\t\t\t Please Enter Name :\n";
+            cout<<"\t\t\t\t\t\t Please Enter word :\n";
             cout<<"\t\t\t\t\t\t ";
-            string s,num;
+            string s,meaning;
             cin>>s;
-            cout<<"\t\t\t\t\t\t Please Enter Phone No :\n";
+            cout<<"\t\t\t\t\t\t Please Enter meaning :\n";
             cout<<"\t\t\t\t\t\t ";
-            cin>>num;
+            cin>>meaning;
             if(t->search(s))
             { 
-                cout<<"\t\t\t\t\t!!!!Name already exists!!!!\n\n";
+                cout<<"\t\t\t\t\t!!!!word already exists!!!!\n\n";
             }
-
-
-
-           t->insert(s, num);
+           t->insert(s, meaning);
 
        }
 
        else if(ch==2)
        {
 
-        cout<<"\t\t\t\t\tPlease Enter name to check: ";
+        cout<<"\t\t\t\t\tPlease Enter word to check: ";
         string s;
         cin>>s;
         bool ok = t->search(s);
         if(ok)
-            cout<<"\t\t\t\t\t\t Contact exists!! \n";
+            cout<<"\t\t\t\t\t\t word exists!! \n";
         else
-            cout<<"\t\t\t\t\t\t Contact does not exists !! \n";
+            cout<<"\t\t\t\t\t\t word does not exists !! \n";
 
         }
 
@@ -81,7 +78,7 @@ int main()
         
         bool ok = t->starts_with(s);
         if(ok)
-            cout<<"\t\t\t\t\t\t Contact exists with this prefix!! \n";
+            cout<<"\t\t\t\t\t\t word exists with this prefix!! \n";
         else
             cout<<"\t\t\t\t\t\t No Contact exists with this prefix!! \n";
 
@@ -90,10 +87,10 @@ int main()
         else if(ch==4)
         {
 
-            cout<<"\t\t\t\t\tPlease Enter name to delete : ";
-            string n;
-            cin>>n;
-            t->remove(n);
+            cout<<"\t\t\t\t\tPlease Enter word to delete : ";
+            string s;
+            cin>>s;
+            t->remove(s);
 
         }
 
